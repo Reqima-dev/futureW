@@ -1,0 +1,65 @@
+.BlogItems {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-bottom: 25px;
+  gap: 25px;
+  padding: 25px;
+}
+
+.BlogItems .blogContents {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.BlogItems .blogContents:hover {
+  box-shadow: 4px -2px 3px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.BlogItems .blogContents:hover h3 {
+  color: var(--SoftRed);
+}
+.BlogItems .blogContents img {
+  height: 150px;
+  object-fit: cover;
+  padding-right: 15px;
+}
+.BlogItems .blogContents div {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.BlogItems .blogContents div h1 {
+  color: var(--GrayishBlue);
+}
+.BlogItems .blogContents div h3 {
+  color: var(--VeryDarkBlue);
+  transition: var(--transition);
+}
+.BlogItems .blogContents div p {
+  color: var(--DarkGrayishBlue);
+}
+
+@media screen and (max-width: 950px) {
+  .BlogItems {
+    flex-wrap: wrap;
+  }
+  .BlogItems .blogContents {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .BlogItems .blogContents {
+    width: 100%;
+  }
+  .BlogItems {
+    padding: 25px 10px;
+  }
+}

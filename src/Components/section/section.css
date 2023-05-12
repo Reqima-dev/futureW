@@ -1,0 +1,126 @@
+.sectionContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+
+  padding: 25px;
+}
+
+.sectionContainer .left {
+  flex: 4;
+}
+
+.sectionContainer .left .leftImg {
+  width: 100%;
+  height: 370px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.sectionContainer .left .leftImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+.sectionContainer .left .leftImg:hover img {
+  transform: scale(1.1);
+}
+
+.leftInfo {
+  padding-top: 20px;
+
+  display: flex;
+  gap: 25px;
+}
+
+.leftInfo h1 {
+  font-size: 50px;
+  font-weight: 800;
+  color: var(--VeryDarkBlue);
+  line-height: 50px;
+}
+.leftInfo div p {
+  color: var(--DarkGrayishBlue);
+  line-height: 25px;
+  text-align: justify;
+  padding-bottom: 30px;
+}
+.leftInfo div button {
+  padding: 15px 30px;
+  border: none;
+  background-color: var(--SoftRed);
+  color: white;
+  letter-spacing: 2.5px;
+
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.leftInfo div button:hover {
+  background-color: var(--VeryDarkBlue);
+}
+
+.sectionContainer .right {
+  background-color: var(--VeryDarkBlue);
+  width: 380px;
+  height: 100%;
+  color: white;
+
+  padding: 20px 15px;
+}
+.sectionContainer .right h1 {
+  color: var(--SoftOrange);
+}
+
+.right .rightItems {
+  padding-top: 28px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.right .rightItems div h4 {
+  font-size: 20px;
+  padding-bottom: 15px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.right .rightItems div h4:hover {
+  color: var(--SoftOrange);
+}
+
+.right .rightItems div p {
+  color: var(--GrayishBlue);
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--GrayishBlue);
+}
+
+@media screen and (max-width: 950px) {
+  .sectionContainer {
+    flex-direction: column;
+  }
+  .sectionContainer .right {
+    width: auto;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .sectionContainer {
+    padding: 25px 10px;
+  }
+  .leftInfo {
+    flex-direction: column;
+  }
+  .leftInfo h1 {
+    font-size: 40px;
+    line-height: normal;
+  }
+  .sectionContainer .left .leftImg {
+    height: 250px;
+  }
+}
